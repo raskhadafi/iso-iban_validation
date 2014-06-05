@@ -35,6 +35,10 @@ or
 
 * [iso-iban](https://github.com/apeiros/iso-iban)
 
+## Licence
+
+* [MIT](LICENSE.txt)
+
 ## Contributing
 
 1. Fork it ( https://github.com/raskhadafi/iso-iban_validation/fork )
