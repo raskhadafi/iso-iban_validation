@@ -6,7 +6,7 @@ class IbanValidator < ActiveModel::EachValidator
       :invalid_iban,
       message: options[:message],
       value:   value,
-    ) if value.blank? && !ISO::IBAN.valid?(value)
+    ) unless ISO::IBAN.valid?(value || '')
   end
 
 end
