@@ -17,8 +17,6 @@ rule /^version:bump:.*/ do |t|
   end
 
   sh "rake install && git add #{file} && git commit -m 'Bump version to #{new_version}'"
-
-  Rake::Task['release'].invoke
 end
 
 desc "Show current version"
