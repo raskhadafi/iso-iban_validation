@@ -17,6 +17,6 @@ module ActiveModel::Validations::HelperMethods
     validates_with IbanValidator, _merge_attributes(attr_names)
   end
 
-  alias_method :validates_iban_format_of, :validates_iban_of
+  alias_method :validates_iban_of, :validates_iban_format_of
 
 end
