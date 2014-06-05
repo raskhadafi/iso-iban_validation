@@ -1,4 +1,4 @@
-# Iso::IbanValidation
+# ActiveRecord Validator for IBAN
 
 This gem adds a validator to active_record obejcts for IBAN.
 It works on top of the gem 'iso-iban'.
