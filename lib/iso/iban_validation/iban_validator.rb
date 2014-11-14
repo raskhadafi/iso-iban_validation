@@ -1,12 +1,14 @@
 class IbanValidator < ActiveModel::EachValidator
 
   def validate_each(record, attribute, value)
-    record.errors.add(
-      attribute,
-      :invalid_iban,
-      message: options[:message],
-      value:   value,
-    ) unless ISO::IBAN.valid?(value || '')
+    ISO::IBAN.validate(value).each do |error_key|
+      record.errors.add(
+        attribute,
+        error_key,
+        message: options[:message],
+        value:   value,
+      )
+    end
   end
 
 end

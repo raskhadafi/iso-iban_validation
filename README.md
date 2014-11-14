@@ -31,6 +31,15 @@ or
 
     validates :iban_field, iban: true
 
+
+## Error translations
+The following error keys should be defined
+  * :invalid_characters
+  * :invalid_country
+  * :invalid_checksum
+  * :invalid_length
+  * :invalid_format
+
 ## Dependency
 
 * [iso-iban](https://github.com/apeiros/iso-iban)
